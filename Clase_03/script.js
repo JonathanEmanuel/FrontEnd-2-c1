@@ -14,9 +14,6 @@ let ptosUsuario = 0;
 let ptosMaquina = 0;
 
 
-
-
-
 /* --------------------- 1. Solicitar opcion del usuario -------------------- */
 const jugarUsuario = () => {
     let opcion;
@@ -48,17 +45,9 @@ const elegirGanador = (opcionUsuario, opcionMaquina) => {
 }
 
 
-/* 
-let usuario=parseFloat(prompt('Bienvenido \n Seleccione :\n 0: Papel \n 1:Tijeras \n 2:Piedra'));
-let maquina =["Papel", "Tijera", "Piedra"]
-const min=0
-const max=maquina.length;
-let eleccion =Math.floor(Math.random()*(max-min)+ min);
- */
-
-
 /* ----------------------------- Bucle Principal ---------------------------- */
 
+// Gana el que tenga dos puntos
 while (ptosMaquina < 2 || ptosUsuario < 2) {
     const usuario = jugarUsuario();
     const maquina = jugarMaquina();
@@ -69,5 +58,4 @@ while (ptosMaquina < 2 || ptosUsuario < 2) {
     console.log(usuario, maquina)
     console.log('Ptos Usuario ' + ptosUsuario);
     console.log('Ptos Maquina ' + ptosMaquina);
-
 }
