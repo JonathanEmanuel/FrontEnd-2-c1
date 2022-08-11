@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+.header, main, footer {
+    font-family: 'Rajdhani', sans-serif;
+    color: #3f3f3f;
+
+}
+
+.header {
+    font-family: 'Rajdhani', sans-serif;
+    color: #3f3f3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+
+main {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 1px solid #3f3f3f;
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.active {
+    box-shadow: 2px 2px 5px #3f3f3f;
+    background-color: rgb(174, 139, 207);
+}
+
+.card img {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+}
+
+/* -------------------------------- Modo dark ------------------------------- */
+.dark .header {
+    background-color: #3f3f3f;
+    color: aliceblue;
+}
+
+.dark main {
+    background-color: #3f3f3f;
+    color: aliceblue;
+}
+
+.dark .card {
+    border: 1px solid aliceblue;
+}
