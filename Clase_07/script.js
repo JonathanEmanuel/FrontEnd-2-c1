@@ -8,13 +8,12 @@ for (let i = 0; i < cantidad; i++) {
 }
 
 // Recorrer un nodeList con for
-for (let i = 0; i < imagenes.length; i++) {
+/* for (let i = 0; i < imagenes.length; i++) {
     imagenes[i].setAttribute('src', urlImagenes[i]);
-}
+} */
 
 // Recorrer un nodeList con forEach
-/*
+
 imagenes.forEach( (item, i) => {
     item.setAttribute( 'src', urlImagenes[i] );
 });
-*/
