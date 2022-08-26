@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, main, footer {
+    font-family: 'Rajdhani', sans-serif;
+    color: #3f3f3f;
+
+}
+
+header {
+    font-family: 'Rajdhani', sans-serif;
+    color: #3f3f3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+
+main {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: blueviolet;
+}
+
+form {
+    background-color: white;
+    width: 30vw;
+    height: fit-content;
+    padding: 2em;
+    margin: 4em 35vw;
+    border-radius: .2em;
+}
+
+textarea,input:not([type=checkbox]):not([type=radio]) {
+    position: relative;
+    width: 100%;
+    padding: .5em;
+    border-radius: .2em;
+    border: 1px solid transparent;
+    background-color: rgba(137, 43, 226, 0.082);
+    color: #3f3f3f;
+    margin-bottom: 1em;
+  }
+
+input.error:not([type=checkbox]):not([type=radio]) {
+    border: 1px solid red;
+}
+
+button {
+    background-color: blueviolet;
+    color: white;
+    font-size: 1.1em;
+    padding: .5em 1em;
+    border: none;
+    margin-top: 1em;
+}
+
+button:hover {
+    background-color: rgb(116, 42, 185);
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
