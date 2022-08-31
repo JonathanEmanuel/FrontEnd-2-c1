@@ -1,0 +1,13 @@
+{
+    "nombre": "JSON",
+    "significado": "Javascript Object Notation",
+    "lenguajeDeProgramacion": false,
+    "tiposDeDatosDisponibles": [
+        "numbers",
+        "strings",
+        "booleans",
+        "null",
+        "arrays",
+        "objects"
+    ]
+}
