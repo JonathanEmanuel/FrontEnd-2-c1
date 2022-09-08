@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+:root {
+    --primary: #7898FF;
+    --secondary: #8E64C5;
+    --app-grey: #F2F2F2;
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+background: linear-gradient(110deg, var(--primary), var(--secondary));
+}
+h1{
+  padding: 15px;
+  color: #F2F2F2;
+  text-align: center;
+}
+main{
+  background-color: white;
+  text-align: center;
+  width: 400px;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 20px;
+}
+main button{
+  padding: 5px 15px;
+  margin: 15px 0;
+}
+main img{
+  width: 100%;
+}
+
+button{
+    background: linear-gradient(110deg, var(--primary), var(--secondary));
+    border: none;
+    padding: 0.3rem;
+    border-radius: 50vh;
+    font-weight: bold;
+    color: white;
+}
+
+.card {
+  border: 1px solid #3f3f3f;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  margin: 1.5vw;
+  padding: 1.5rem;
+}
+
+.card:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.card img {
+  width: 80%;
+}
+
+.error {
+  color: red;
+}
