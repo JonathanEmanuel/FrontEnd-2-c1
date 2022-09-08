@@ -12,11 +12,16 @@ function renderizarCards(lista){
 }
 
 function ocultarLoading(){
-    
+    document.querySelector('#loading').classList.add('oculto');
+}
+
+function mostrarLoading(){
+    document.querySelector('#loading').classList.remove('oculto');
 }
 
 btn.addEventListener('click', function(){
-
+    mostrarLoading();
+    console.log('Iniciando...')
     fetch(ruta).then((respuesta) => {
         console.log(respuesta);
         return respuesta.json();
@@ -31,5 +36,8 @@ btn.addEventListener('click', function(){
         console.error(response);
         tarjetas.innerHTML = '<h2>En este momento no podemos acceder al servicio </h2>';
     })
+    .finally( function(){
+        console.log('Finalizando...')
+        ocultarLoading();
+    })
 })
-
