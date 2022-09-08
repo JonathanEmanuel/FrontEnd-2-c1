@@ -30,6 +30,6 @@ btn.addEventListener('click', function(){
         console.log('Respuesta');
         console.error(response);
         tarjetas.innerHTML = '<h2>En este momento no podemos acceder al servicio </h2>';
-    }).finally()
+    })
 })
 
