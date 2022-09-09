@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/publicalo.png" type="image/png">
+</head>
+<body>
+    <header class="super-center">
+        <h1> 📑 Posteo <span id="postId"></span> </h1>
+    </header>
+    <main class="super-center">
+        <form class="search">
+            <textarea id="titulo" cols="30" rows="6" placeholder="Escribir el Post" autofocus="on" maxlength="256" ></textarea>
+            <span class="caracteres" id="caracteres">0</span>
+            <button type="submit">Publicar</button>
+          </form>
+          <h3>Publicación</h3>
+          <div id="titulo-publicado">
+          </div>
+    </main>
+    <footer class="super-center">
+        <p>Posteos DH 2022</p>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
