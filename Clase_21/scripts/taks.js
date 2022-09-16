@@ -77,11 +77,10 @@ window.addEventListener('load', function () {
     .then( respuesta => respuesta.json())
     .then( data => {
         console.log('RESPUESTA DEL SERVIDOR');
+        //data[1].completed = true;
         console.log(data)
         renderizarTareas(data);
-    })
-
-
+    });
 
   };
 
@@ -118,11 +117,6 @@ window.addEventListener('load', function () {
       consultarTareas();
     })
     .catch( error => console.log(error))
-
-
-
-
-
   });
 
 
@@ -131,8 +125,22 @@ window.addEventListener('load', function () {
   /* -------------------------------------------------------------------------- */
   function renderizarTareas(listado) {
 
-    listadoTareasPendientes =  listado;
+    listadoTareasPendientes =  [];
     listadoTareasTerminadas = [];
+
+
+    listado.forEach(tarea => {
+      if(tarea.completed){
+        listadoTareasTerminadas.push(tarea);
+      } else {
+        listadoTareasPendientes.push(tarea);
+      }
+    });
+
+
+    contenedorTareasPendientes.innerHTML = '';
+    listadoTareasTerminadas.innerHTML = '';
+
 
     listadoTareasPendientes.forEach( tarea => {
       // por cada tarea inyectamos un nodo li
@@ -165,13 +173,32 @@ window.addEventListener('load', function () {
     })
 
 
+    const botonesChange = document.querySelectorAll('.change');
+    const botonesDelete = document.querySelectorAll('.borrar');
+
+
+    botonesChange.forEach(boton => {
+      boton.addEventListener('click', function(event) {
+        //console.log(event.target);
+        botonCambioEstado(event.target)
+      })
+    });
+
+    botonesDelete.forEach(boton => {
+      boton.addEventListener('click', function(event) {
+        //console.log(event.target);
+        botonBorrarTarea(event.target)
+      })
+    });
+
   };
 
   /* -------------------------------------------------------------------------- */
   /*                  FUNCIÓN 6 - Cambiar estado de tarea [PUT]                 */
   /* -------------------------------------------------------------------------- */
-  function botonesCambioEstado() {
-    
+  function botonCambioEstado(elemento) {
+    console.log(elemento);
+    console.log(elemento.id);
     
 
 
@@ -182,8 +209,8 @@ window.addEventListener('load', function () {
   /* -------------------------------------------------------------------------- */
   /*                     FUNCIÓN 7 - Eliminar tarea [DELETE]                    */
   /* -------------------------------------------------------------------------- */
-  function botonBorrarTarea() {
-   
+  function botonBorrarTarea(elemento) {
+    console.log('Eliminar tarea', elemento.id);
     
 
     
