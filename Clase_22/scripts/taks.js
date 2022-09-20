@@ -145,7 +145,7 @@ window.addEventListener('load', function () {
             <button class="change" id="${tarea.id}"><i class="fa-regular fa-circle"></i></button>
             <div class="descripcion">
               <p class="nombre">${tarea.description}</p>
-              <p class="timestamp">${tarea.createdAt}</p>
+              <p class="timestamp">${ new Date(tarea.createdAt).toLocaleDateString()}</p>
             </div>
           </li>`;
       }
