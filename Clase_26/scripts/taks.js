@@ -135,12 +135,18 @@ window.addEventListener('load', function () {
         // POR HACER: Varificar que la tarea se creo correctamente
         console.log("Tarea recien posteada");
         console.log(info);
-
+        inputNuevaTarea.value = '';
 
       // necesitamos recargar nuestra interfaz
       consultarTareas();
+    }).catch( error => {
+      console.log(error);
+      Swal.fire(
+        'Error',
+        'Por favor, intente más tarde',
+        'error'
+      )
     })
-    .catch( error => console.log(error))
   });
 
   /* -------------------------------------------------------------------------- */
