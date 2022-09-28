@@ -10,7 +10,8 @@ if(!jwt){
 
 /* ------ comienzan las funcionalidades una vez que carga el documento ------ */
 window.addEventListener('load', function () {
-
+  /* ---------------------------- Inicializo AOS.JS --------------------------- */
+  AOS.init();
   /* ---------------- variables globales y llamado a funciones ---------------- */
   const btnCerrarSesion = document.querySelector('#closeApp');
   const formCrearTarea = document.querySelector('.nueva-tarea');
@@ -134,18 +135,13 @@ window.addEventListener('load', function () {
         // POR HACER: Varificar que la tarea se creo correctamente
         console.log("Tarea recien posteada");
         console.log(info);
-        Swal.fire(
-          'Tarea creada correctamente',
-          '',
-          'success'
-        )
+
 
       // necesitamos recargar nuestra interfaz
       consultarTareas();
     })
     .catch( error => console.log(error))
   });
-
 
   /* -------------------------------------------------------------------------- */
   /*                  FUNCIÓN 5 - Renderizar tareas en pantalla                 */
@@ -159,7 +155,7 @@ window.addEventListener('load', function () {
       if(tarea.completed){
         contador++;
         contenedorTareasTerminadas.innerHTML += `
-            <li class="tarea">
+            <li class="tarea" data-aos="flip-up">
               <div class="hecha">
                 <i class="fa-regular fa-circle-check"></i>
               </div>
@@ -174,7 +170,7 @@ window.addEventListener('load', function () {
 
       } else {
         contenedorTareasPendientes.innerHTML += `
-          <li class="tarea">
+          <li class="tarea" data-aos="fade-left">
             <button class="change" id="${tarea.id}"><i class="fa-regular fa-circle"></i></button>
             <div class="descripcion">
               <p class="nombre">${tarea.description}</p>

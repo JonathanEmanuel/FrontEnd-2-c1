@@ -23,6 +23,25 @@ window.addEventListener('load', function () {
 
         console.log("se hizo submit");
 
+        if( inputEmail.value == ''  ){
+            Swal.fire(
+                'To Do',
+                'Por favor, complete el Email',
+                'info'
+            );
+            return;
+        }
+
+
+        if( inputPassword.value == ''  ){
+            Swal.fire(
+                'To Do',
+                'Por favor, complete la contraseña',
+                'info'
+            );
+            return;
+        }
+
         const usuario = {
             email: inputEmail.value,
             password: inputPassword.value
